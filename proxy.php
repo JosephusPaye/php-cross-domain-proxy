@@ -23,7 +23,7 @@ if( ! parse_url($url, PHP_URL_SCHEME))
 	failure(400, "Not an absolute URL: $url");
 
 // Check referer hostname
-if( ! parse_url($headers['Referer'] ?? null, PHP_URL_HOST) == $_SERVER['HTTP_HOST'])
+if( ! parse_url($headers['Referer'] ?? $headers['referer'] ?? null, PHP_URL_HOST) == $_SERVER['HTTP_HOST'])
 	failure(403, "Invalid referer");
 
 // Check whitelist, if not empty
