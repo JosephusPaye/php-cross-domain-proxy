@@ -10,7 +10,7 @@
     },
     "require": {
         "php": "7.*",
-        "lib-curl": ">=7.36"
+        "lib-curl": ">=7.35"
     },
     "autoload": {
         "psr-4": {"Geekality\\": "src/"}
